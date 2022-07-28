@@ -1,5 +1,4 @@
 # program to identify fibonacci numbers from a list of numbers
-
 def fib1(A):
     output = []
     max_num = 50
@@ -12,3 +11,21 @@ def fib1(A):
         if num in fib_list:
             output.append(num)
     return output
+
+
+# fibonacci number at a given position
+def fibonacci(pos):
+    a = 1 
+    b = 1
+    for i in range(pos):
+        temp = a + b
+        a = b
+        b = temp
+    return temp 
+
+def fibonacci_relative(pos, a=1, b=1):
+    for i in range(pos):
+        temp = a + b
+        a = b
+        b = temp
+    return temp
