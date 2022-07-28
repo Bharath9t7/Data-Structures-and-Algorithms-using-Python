@@ -23,9 +23,16 @@ def fibonacci(pos):
         b = temp
     return temp 
 
-def fibonacci_relative(pos, a=1, b=1):
+def fibonacci_relative(pos, a = 1, b = 1):
     for i in range(pos):
         temp = a + b
         a = b
         b = temp
     return temp
+
+#fibonacci recursive
+def fibonacci_recursive(n, a = 1, b = 1):
+    if n > 1:
+        return fibonacci_recursive(n-1, b, a + b)
+    else:
+        return a + b
